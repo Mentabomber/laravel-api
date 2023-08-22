@@ -11,7 +11,7 @@ class ProjectController extends Controller
 {
     public function ProjectIndex() {
 
-        $projects = Project :: with('type') -> paginate(10);
+        $projects = Project :: with('type') -> paginate(12);
 
         return response() -> json([
             'projects' => $projects
